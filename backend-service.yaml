@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service # Create service
+metadata:
+  name: backend # Sets the service name
+  labels:
+    app: backend-demo # Defines app to create service for
+spec:
+  type: ClusterIP # Sets the service type
+  ports:
+      # By default and for convenience, the `targetPort` is set to the same value as the `port` field.
+    - port: 8000
+      targetPort: 8000
+  selector:
+    app: backend-demo

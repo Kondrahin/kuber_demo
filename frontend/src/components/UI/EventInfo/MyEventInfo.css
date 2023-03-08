@@ -1,0 +1,34 @@
+.description {
+    position: relative;
+    top: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 500px;
+    text-align: center;
+    z-index: 1;
+}
+
+.lead {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.button {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    top: 450px;
+    z-index: 2;
+}
+
+.UpdateForm {
+    position: relative;
+    z-index: 3;
+}
+
+.ParticipantsList {
+    position: relative;
+    z-index: 10;
+}

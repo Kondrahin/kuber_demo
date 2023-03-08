@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontend
+  labels:
+    app: frontend-demo
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: frontend-demo
+  template:
+    metadata:
+      labels:
+        app: frontend-demo
+    spec:
+      containers:
+        - name: frontend
+          image: kondrahin/kuber_demo_frontend:latest
+          ports:
+          - containerPort: 3000
+          env:
+          - name: REACT_APP_BACKEND_API
+            value: "http://{host:port}/api/v1"
